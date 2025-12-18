@@ -15,21 +15,8 @@ The vault allocates and reallocates funds between pools automatically according 
 
 
 
-this is a reactuve network boounty
+
 
 The Reactive Network is an EVM-compatible execution layer that allows developers to create dApps using reactive contracts. These contracts differ from traditional smart contracts by using inversion-of-control for the transaction lifecycle, driven by data flows across blockchains rather than user input. Reactive contracts receive event logs from various chains, executing Solidity logic based on these events instead of user transactions. They can independently determine the need to transmit data to destination chains, enabling conditional state changes. The Reactive Network offers fast and cost-effective computation through a proprietary parallelized EVM implementation.
 
 
-for this task i wanna use - AAve v3 and morpho
-
-we gotta be smart about what we are building the the type of events we looking for at the end user should make profits from these actions.
-
-docs
-https://docs.morpho.org/get-started/
-https://docs.morpho.org/build/earn/get-started
-https://docs.morpho.org/build/earn/concepts/vault-mechanics
-https://docs.morpho.org/build/earn/concepts/vault-mechanics
-https://docs.morpho.org/get-started/resources/addresses/
-https://aave.com/docs/aave-v3/overview
-https://aave.com/docs/aave-v3/smart-contracts
-https://aave.com/docs/aave-v3/smart-contracts/view-contracts
