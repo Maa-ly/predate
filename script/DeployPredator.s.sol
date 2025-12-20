@@ -165,6 +165,11 @@ contract DeployPredator is Script {
         PredatorReactiveManager manager = new PredatorReactiveManager(address(vault));
         vault.setManager(address(manager));
 
+        bool preferMorpho = vm.envOr("PREFER_MORPHO", false);
+        if (preferMorpho || aaveSource.aToken() == address(0)) {
+            vault.setActiveSource(1);
+        }
+
         manager.setConfig(
             vm.envOr("RATE_DIFF_THRESHOLD_RAY", uint256(0.02e27)),
             vm.envOr("EXIT_STRESS_BPS", uint256(7500)),

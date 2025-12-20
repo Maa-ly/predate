@@ -1,4 +1,4 @@
-.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe
+.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe interact interact-sepolia
 
 ifneq (,$(wildcard .env))
 include .env
@@ -55,3 +55,13 @@ reactive-subscribe:
 	@SENTINEL=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress")]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/5318007/runReactive-latest.json); \
 	test -n "$$SENTINEL"; \
 	cast send $$SENTINEL "subscribe()" --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS)
+
+interact:
+	forge script script/InteractPredator.s.sol:InteractPredator --rpc-url $(RPC_URL) --broadcast $(SENDER_ARGS) -vvvv
+
+interact-sepolia:
+	@VAULT=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress") and "PredatorVault" in (t.get("contractName") or "")]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/$(SEPOLIA_CHAIN_ID)/runSepolia-latest.json); \
+	MANAGER=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress") and "PredatorReactiveManager" in (t.get("contractName") or "")]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/$(SEPOLIA_CHAIN_ID)/runSepolia-latest.json); \
+	test -n "$$VAULT"; \
+	test -n "$$MANAGER"; \
+	VAULT=$$VAULT MANAGER=$$MANAGER forge script script/InteractPredator.s.sol:InteractPredator --rpc-url $(RPC_URL) --broadcast $(SENDER_ARGS) -vvvv

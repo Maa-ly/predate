@@ -80,10 +80,10 @@ What can cause loss or underperformance:
 
 ### Sepolia (Chain ID: `11155111`)
 
-- `PredatorVault`: `0xee962064b44df526a62A746BA27602941413eD94`
-- `PredatorReactiveManager`: `0xe89d63C3eE26536244a9355f4712c2D1E321B96E`
-- `AaveV3YieldSource`: `0x39e3137aa930476622EAb6Aec7cF44f01f4dAcB8`
-- `MorphoVaultYieldSource`: `0xC204f3DC2bf94f31E21ad9178A6D59e8dD541e3f`
+- `PredatorVault`: `0x69eC52139FB0D71b6BC30F8a64a888A476B7801E`
+- `PredatorReactiveManager`: `0x5591d1125E729fb241D8181A246De6776e5FD918`
+- `AaveV3YieldSource`: `0x139d8e8735ef44323bcEAE56a6eC8Cf7b1a6Ab5c`
+- `MorphoVaultYieldSource`: `0xFFAFC09a01a24cBb15801A5EbbCE3CC4b40dfB3b`
 
 Protocol addresses used by this deployment:
 
@@ -101,10 +101,45 @@ Protocol addresses used by this deployment:
 
 This repo uses Foundry scripts and a `Makefile`.
 
+- Set `RPC_URL` and `PRIVATE_KEY` (or put them in `.env`).
 - Deploy on Sepolia: `make deploy-sepolia`
+- Interact with latest Sepolia deployment: `make interact-sepolia` (reads `broadcast/DeployPredator.s.sol/11155111/runSepolia-latest.json`)
 - Deploy sentinel on Lasna: `make deploy-reactive`
 - Register subscriptions on Lasna: `make reactive-subscribe`
 - Full flow (Sepolia + Lasna): `make deploy-crosschain`
+
+### Makefile Targets
+
+- `make build`: Compile contracts
+- `make test`: Run tests
+- `make deploy-sepolia`: Deploy vault + adapters + manager to Sepolia using `.env` addresses
+- `make deploy-reactive`: Deploy `PredatorSentinel` to Lasna targeting the latest Sepolia manager
+- `make reactive-subscribe`: Register Reactive Network subscriptions for the latest sentinel
+- `make interact-sepolia`: Run `script/InteractPredator.s.sol` against the latest Sepolia deployment
+
+### Interact Script
+
+The `InteractPredator` script can:
+
+- Print status (`DO_STATUS=true`)
+- Deposit ERC20 assets (`DEPOSIT_ASSETS=...`)
+- Deposit ETH (wrap to WETH) (`DEPOSIT_ETH=...`, `WETH=...`)
+- Run manager evaluation (`DO_EVALUATE=true`)
+- Redeem shares (`REDEEM_SHARES=...`)
+
+Examples:
+
+```bash
+# Deploy on Sepolia (requires RPC_URL + PRIVATE_KEY)
+RPC_URL=https://ethereum-sepolia.publicnode.com PRIVATE_KEY=... make deploy-sepolia
+
+# Deposit 10 USDC into the latest Sepolia deployment
+RPC_URL=https://ethereum-sepolia.publicnode.com PRIVATE_KEY=... \
+DEPOSIT_ASSETS=10000000 DO_EVALUATE=true DO_STATUS=true make interact-sepolia
+
+# Just print status for the latest Sepolia deployment
+RPC_URL=https://ethereum-sepolia.publicnode.com PRIVATE_KEY=... DO_STATUS=true make interact-sepolia
+```
 
 ## Notes
 
