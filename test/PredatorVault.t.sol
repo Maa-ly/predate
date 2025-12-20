@@ -2,6 +2,7 @@
 pragma solidity ^0.8.20;
 
 import {Test} from "forge-std/Test.sol";
+import {Vm} from "forge-std/Vm.sol";
 
 import {MockERC20} from "../src/mocks/MockERC20.sol";
 import {MockAaveV3Pool} from "../src/mocks/MockAaveV3Pool.sol";
@@ -12,6 +13,8 @@ import {AaveV3YieldSource} from "../src/adapters/AaveV3YieldSource.sol";
 import {MorphoVaultYieldSource} from "../src/adapters/MorphoVaultYieldSource.sol";
 import {PredatorVault} from "../src/PredatorVault.sol";
 import {PredatorReactiveManager} from "../src/PredatorReactiveManager.sol";
+import {PredatorSentinel} from "../src/reactive/PredatorSentinel.sol";
+import {IReactive} from "reactive-lib/interfaces/IReactive.sol";
 
 contract PredatorVaultTest is Test {
     address internal alice = address(0xA11CE);
@@ -122,5 +125,152 @@ contract PredatorVaultTest is Test {
         uint256 assetsOut = vault.redeem(200e18, alice, alice);
         assertGt(assetsOut, 0);
         assertEq(asset.balanceOf(alice), 1_000_000e18 - 1000e18 + assetsOut);
+    }
+}
+
+contract PredatorSentinelTest is Test {
+    event Callback(uint256 indexed chain_id, address indexed _contract, uint64 indexed gas_limit, bytes payload);
+
+    uint256 internal constant SERVICE_ADDR = uint256(uint160(0x0000000000000000000000000000000000fffFfF));
+
+    function test_MorphoMintTransferTriggersCallback() public {
+        uint256 chainId = 11155111;
+        address aavePool = address(0x1111);
+        address morphoVault = address(0x2222);
+        address destinationManager = address(0x3333);
+        uint64 destinationGasLimit = 500_000;
+
+        PredatorSentinel sentinel =
+            new PredatorSentinel(chainId, aavePool, morphoVault, chainId, destinationManager, destinationGasLimit);
+
+        uint256 transferTopic0 = uint256(keccak256("Transfer(address,address,uint256)"));
+
+        IReactive.LogRecord memory log = IReactive.LogRecord({
+            chain_id: chainId,
+            _contract: morphoVault,
+            topic_0: transferTopic0,
+            topic_1: 0,
+            topic_2: uint256(uint160(address(0xBEEF))),
+            topic_3: 0,
+            data: "",
+            block_number: 0,
+            op_code: 0,
+            block_hash: 0,
+            tx_hash: 0,
+            log_index: 0
+        });
+
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+
+        vm.expectEmit(true, true, true, true, address(sentinel));
+        emit Callback(chainId, destinationManager, destinationGasLimit, payload);
+
+        vm.prank(address(uint160(SERVICE_ADDR)));
+        sentinel.react(log);
+    }
+
+    function test_MorphoBurnTransferTriggersCallback() public {
+        uint256 chainId = 11155111;
+        address aavePool = address(0x1111);
+        address morphoVault = address(0x2222);
+        address destinationManager = address(0x3333);
+        uint64 destinationGasLimit = 500_000;
+
+        PredatorSentinel sentinel =
+            new PredatorSentinel(chainId, aavePool, morphoVault, chainId, destinationManager, destinationGasLimit);
+
+        uint256 transferTopic0 = uint256(keccak256("Transfer(address,address,uint256)"));
+
+        IReactive.LogRecord memory log = IReactive.LogRecord({
+            chain_id: chainId,
+            _contract: morphoVault,
+            topic_0: transferTopic0,
+            topic_1: uint256(uint160(address(0xBEEF))),
+            topic_2: 0,
+            topic_3: 0,
+            data: "",
+            block_number: 0,
+            op_code: 0,
+            block_hash: 0,
+            tx_hash: 0,
+            log_index: 0
+        });
+
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+
+        vm.expectEmit(true, true, true, true, address(sentinel));
+        emit Callback(chainId, destinationManager, destinationGasLimit, payload);
+
+        vm.prank(address(uint160(SERVICE_ADDR)));
+        sentinel.react(log);
+    }
+
+    function test_MorphoRegularTransferDoesNotTriggerCallback() public {
+        uint256 chainId = 11155111;
+        address aavePool = address(0x1111);
+        address morphoVault = address(0x2222);
+        address destinationManager = address(0x3333);
+        uint64 destinationGasLimit = 500_000;
+
+        PredatorSentinel sentinel =
+            new PredatorSentinel(chainId, aavePool, morphoVault, chainId, destinationManager, destinationGasLimit);
+
+        uint256 transferTopic0 = uint256(keccak256("Transfer(address,address,uint256)"));
+
+        IReactive.LogRecord memory log = IReactive.LogRecord({
+            chain_id: chainId,
+            _contract: morphoVault,
+            topic_0: transferTopic0,
+            topic_1: uint256(uint160(address(0xAAAA))),
+            topic_2: uint256(uint160(address(0xBBBB))),
+            topic_3: 0,
+            data: "",
+            block_number: 0,
+            op_code: 0,
+            block_hash: 0,
+            tx_hash: 0,
+            log_index: 0
+        });
+
+        vm.recordLogs();
+        vm.prank(address(uint160(SERVICE_ADDR)));
+        sentinel.react(log);
+        Vm.Log[] memory logs = vm.getRecordedLogs();
+        assertEq(logs.length, 0);
+    }
+
+    function test_OwnerCanCallReact() public {
+        uint256 chainId = 11155111;
+        address aavePool = address(0x1111);
+        address morphoVault = address(0x2222);
+        address destinationManager = address(0x3333);
+        uint64 destinationGasLimit = 500_000;
+
+        PredatorSentinel sentinel =
+            new PredatorSentinel(chainId, aavePool, morphoVault, chainId, destinationManager, destinationGasLimit);
+
+        uint256 transferTopic0 = uint256(keccak256("Transfer(address,address,uint256)"));
+
+        IReactive.LogRecord memory log = IReactive.LogRecord({
+            chain_id: chainId,
+            _contract: morphoVault,
+            topic_0: transferTopic0,
+            topic_1: 0,
+            topic_2: uint256(uint160(address(0xBEEF))),
+            topic_3: 0,
+            data: "",
+            block_number: 0,
+            op_code: 0,
+            block_hash: 0,
+            tx_hash: 0,
+            log_index: 0
+        });
+
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+
+        vm.expectEmit(true, true, true, true, address(sentinel));
+        emit Callback(chainId, destinationManager, destinationGasLimit, payload);
+
+        sentinel.react(log);
     }
 }

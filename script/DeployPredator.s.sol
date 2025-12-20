@@ -21,6 +21,8 @@ import {MockERC4626} from "../src/mocks/MockERC4626.sol";
 contract DeployPredator is Script {
     using SafeERC20 for IERC20;
 
+    uint256 internal constant SEPOLIA_CHAIN_ID = 11_155_111;
+
     struct DeployResult {
         address asset;
         address vault;
@@ -34,6 +36,10 @@ contract DeployPredator is Script {
     }
 
     function run() external returns (DeployResult memory r) {
+        return runSepolia();
+    }
+
+    function runSepolia() public returns (DeployResult memory r) {
         uint256 privateKey = vm.envOr("PRIVATE_KEY", uint256(0));
         address deployer = privateKey != 0 ? vm.addr(privateKey) : address(0);
 
@@ -76,6 +82,33 @@ contract DeployPredator is Script {
         console2.log("morphoSource", r.morphoSource);
         console2.log("aavePool", r.aavePool);
         console2.log("aaveDataProvider", r.aaveDataProvider);
+        console2.log("morphoVault", r.morphoVault);
+        console2.log("sentinel", r.sentinel);
+
+        return r;
+    }
+
+    function runReactive(address destinationManager) external returns (DeployResult memory r) {
+        uint256 privateKey = vm.envOr("PRIVATE_KEY", uint256(0));
+        if (privateKey != 0) {
+            vm.startBroadcast(privateKey);
+        } else {
+            vm.startBroadcast();
+        }
+
+        address aavePool = vm.envAddress("AAVE_POOL");
+        address morphoVault = vm.envAddress("MORPHO_VAULT");
+
+        r.asset = vm.envOr("ASSET", address(0));
+        r.manager = destinationManager;
+        r.aavePool = aavePool;
+        r.morphoVault = morphoVault;
+        r.sentinel = address(_deploySepoliaSentinel(destinationManager, aavePool, morphoVault));
+
+        vm.stopBroadcast();
+
+        console2.log("manager", r.manager);
+        console2.log("aavePool", r.aavePool);
         console2.log("morphoVault", r.morphoVault);
         console2.log("sentinel", r.sentinel);
 
@@ -169,6 +202,16 @@ contract DeployPredator is Script {
 
         sentinel = new PredatorSentinel(
             sourceChainId, aavePool, morphoVault, destinationChainId, destinationManager, destinationGasLimit
+        );
+    }
+
+    function _deploySepoliaSentinel(address destinationManager, address aavePool, address morphoVault)
+        internal
+        returns (PredatorSentinel sentinel)
+    {
+        uint64 destinationGasLimit = uint64(vm.envOr("SENTINEL_DESTINATION_GAS_LIMIT", uint256(500_000)));
+        sentinel = new PredatorSentinel(
+            SEPOLIA_CHAIN_ID, aavePool, morphoVault, SEPOLIA_CHAIN_ID, destinationManager, destinationGasLimit
         );
     }
 }

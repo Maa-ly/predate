@@ -1,21 +1,112 @@
-DETAILS
-Design and implement a cross-chain lending automation vault using Reactive Smart Contracts. The vault should monitor at least two lending markets (e.g. two lending pools on Ethereum Sepolia) and automatically rebalance provided liquidity between them based on a configurable yield signal.
+## Predate Vault
+
+Predate Vault is a reactive, event-driven lending vault that routes deposits between Aave v3 and a Morpho ERC4626 vault. It monitors “yield vs. stress” on both venues and can rebalance liquidity when conditions change.
+
+### Vision (Why Use This)
+
+Most lending users are passive: they pick one market, deposit, and only notice problems after withdrawal liquidity dries up or yields collapse. Predate Vault’s goal is to make that behavior automatic:
+
+- Chase yield only when it’s safe: move toward higher supply rates when liquidity is healthy.
+- Escape stress early: rotate away from venues where withdrawals are getting constrained before you’re forced to exit at the worst time.
+- React fast: use Reactive Network subscriptions so the strategy can be triggered by on-chain events, not manual monitoring.
+
+In short: it’s a “stay compounding, don’t get trapped” vault. The upside is potentially better yield and fewer bad exits; the tradeoff is added contract/protocol complexity and the possibility the strategy underperforms in some market regimes.
+
+This repository contains:
+
+- An on-chain vault (`PredatorVault`) that mints shares on deposit and withdraws underlying on redeem
+- Two yield-source adapters:
+  - `AaveV3YieldSource` (Aave v3 supply via Pool + DataProvider)
+  - `MorphoVaultYieldSource` (ERC4626 vault integration)
+- A strategy/controller (`PredatorReactiveManager`) that evaluates signals and triggers rebalances
+- A Reactive Network sentinel (`PredatorSentinel`) that subscribes to Sepolia events and emits cross-chain callbacks targeting the manager
+
+### How It Works
+
+1. Users deposit the underlying asset into `PredatorVault` and receive ERC20 shares.
+2. The vault invests idle assets into the currently active yield source (Aave or Morpho).
+3. `PredatorReactiveManager.evaluateAndRebalance()` compares:
+   - Supply rates (in ray, \(1e27\))
+   - Stress signals (in bps) from each source
+4. If the rate advantage exceeds a threshold and stress constraints allow it, the manager rebalances:
+   - Withdraws from sources
+   - Switches the active source
+   - Re-deploys idle assets into the new source
+5. `PredatorSentinel` runs on Reactive Network (Lasna) and subscribes to events on Sepolia:
+   - Aave v3 `ReserveDataUpdated`
+   - Morpho ERC4626 `Deposit` and `Withdraw`
+   When those events occur, it emits a Reactive callback targeting `evaluateAndRebalance()` on the Sepolia manager.
+
+### Profit / Loss (What The User Gets)
+
+This vault is designed to improve risk-adjusted returns versus passively supplying to a single venue, but it does not guarantee profit.
+
+How a user “makes money”:
+
+- Users deposit an underlying ERC20 and receive vault shares.
+- Over time, the underlying earns yield in Aave or Morpho.
+- When the vault’s underlying balance grows from yield, each share becomes redeemable for more underlying than before.
+
+Why it can outperform:
+
+- If one venue’s supply rate becomes meaningfully better, the manager can move capital to capture the higher yield.
+- If stress rises (e.g., worse withdrawal liquidity) the manager can rotate away to reduce the chance of being stuck.
+
+What can cause loss or underperformance:
+
+- Both venues can have adverse conditions (low yield, liquidity constraints, protocol risk).
+- Rebalances can happen “too late” relative to market changes, or miss yield if thresholds are too conservative.
+- If liquidity is constrained on a venue, exits can be delayed and the vault may hold more idle liquidity to satisfy withdrawals.
+- Smart contract risk exists in the vault and adapters, and in the underlying protocols (Aave/Morpho).
 
 
+### Contracts
 
-Core requirements:
+- `src/PredatorVault.sol`
+  - Holds underlying and mints/burns shares
+  - Owns the source adapters and delegates moves via the manager
+- `src/adapters/AaveV3YieldSource.sol`
+  - Supplies/withdraws to Aave v3 Pool
+  - Reads yield/stress via Aave pool + data provider
+- `src/adapters/MorphoVaultYieldSource.sol`
+  - Deposits/withdraws to an ERC4626 vault
+  - Reads yield/stress from the vault (e.g. maxWithdraw / share price dynamics)
+- `src/PredatorReactiveManager.sol`
+  - Evaluates the two sources and calls `PredatorVault.rebalanceTo(target)`
+- `src/reactive/PredatorSentinel.sol`
+  - Reactive Contract that subscribes to Sepolia logs and emits callbacks to the Sepolia manager
 
-Integrate with at least two lending pools (e.g. A and B) that expose deposit/withdraw and rate information on-chain.
-Use Reactive Smart Contracts to:
-Listen to on-chain events or periodically check state (supply/borrow rates, utilization, or another yield proxy).
-Trigger rebalancing transactions that move funds from pool A → B or B → A when a configurable condition is met (e.g. yield difference above a threshold).
-Provide a single “vault” interface for users:
-Users deposit into the vault once.
-The vault allocates and reallocates funds between pools automatically according to the strategy.
+## Deployments
 
+### Sepolia (Chain ID: `11155111`)
 
+- `PredatorVault`: `0xee962064b44df526a62A746BA27602941413eD94`
+- `PredatorReactiveManager`: `0xe89d63C3eE26536244a9355f4712c2D1E321B96E`
+- `AaveV3YieldSource`: `0x39e3137aa930476622EAb6Aec7cF44f01f4dAcB8`
+- `MorphoVaultYieldSource`: `0xC204f3DC2bf94f31E21ad9178A6D59e8dD541e3f`
 
+Protocol addresses used by this deployment:
 
+- `ASSET`: `0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238`
+- `AAVE_POOL`: `0x6Ae43d3271ff6888e7Fc43Fd7321a503ff738951`
+- `AAVE_DATA_PROVIDER`: `0x3e9708d80f7B3e43118013075F7e95CE3AB31F31`
+- `MORPHO_VAULT`: `0x9A1Fc3ff25083f33373Bbf9617E12892FF19E07A`
 
-The Reactive Network is an EVM-compatible execution layer that allows developers to create dApps using reactive contracts. These contracts differ from traditional smart contracts by using inversion-of-control for the transaction lifecycle, driven by data flows across blockchains rather than user input. Reactive contracts receive event logs from various chains, executing Solidity logic based on these events instead of user transactions. They can independently determine the need to transmit data to destination chains, enabling conditional state changes. The Reactive Network offers fast and cost-effective computation through a proprietary parallelized EVM implementation.
+### Reactive Network (Lasna) (Chain ID: `5318007`)
 
+- `PredatorSentinel`: `0xe89d63C3eE26536244a9355f4712c2D1E321B96E`
+- Reactive system subscription service: `0x0000000000000000000000000000000000fffFfF`
+
+## Deploy / Run
+
+This repo uses Foundry scripts and a `Makefile`.
+
+- Deploy on Sepolia: `make deploy-sepolia`
+- Deploy sentinel on Lasna: `make deploy-reactive`
+- Register subscriptions on Lasna: `make reactive-subscribe`
+- Full flow (Sepolia + Lasna): `make deploy-crosschain`
+
+## Notes
+
+- `ASSET` must match `MORPHO_VAULT.asset()` or deployment will revert with `ASSET_MISMATCH`.
+- The sentinel registers subscriptions via an explicit `subscribe()` call (not in the constructor) to avoid subscription failures during deployment.
