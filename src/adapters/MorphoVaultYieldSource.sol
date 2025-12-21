@@ -72,11 +72,15 @@ contract MorphoVaultYieldSource is IYieldSource {
 
     function deposit(uint256 assets) external onlyVault returns (uint256 deployedAssets) {
         if (assets == 0) return 0;
-        underlying.safeTransferFrom(vault, address(this), assets);
-        underlying.forceApprove(address(morphoVault), assets);
-        uint256 shares = morphoVault.deposit(assets, address(this));
+        uint256 maxD = morphoVault.maxDeposit(address(this));
+        if (maxD == 0) return 0;
+        uint256 toDeposit = assets > maxD ? maxD : assets;
+
+        underlying.safeTransferFrom(vault, address(this), toDeposit);
+        underlying.forceApprove(address(morphoVault), toDeposit);
+        uint256 shares = morphoVault.deposit(toDeposit, address(this));
         require(shares > 0, "ZERO_SHARES");
-        return assets;
+        return toDeposit;
     }
 
     function withdraw(uint256 assets, address to) external onlyVault returns (uint256 withdrawnAssets) {

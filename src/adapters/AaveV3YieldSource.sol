@@ -38,16 +38,30 @@ contract AaveV3YieldSource is IYieldSource {
         return address(underlying);
     }
 
+    function _getReserveData() internal view returns (bool ok, IAaveV3Pool.ReserveData memory r) {
+        try aavePool.getReserveData(address(underlying)) returns (IAaveV3Pool.ReserveData memory rr) {
+            return (true, rr);
+        } catch {
+            return (false, r);
+        }
+    }
+
     function aToken() public view returns (address) {
-        return aavePool.getReserveData(address(underlying)).aTokenAddress;
+        (bool ok, IAaveV3Pool.ReserveData memory r) = _getReserveData();
+        if (!ok) return address(0);
+        return r.aTokenAddress;
     }
 
     function totalAssets() public view returns (uint256) {
-        return IERC20(aToken()).balanceOf(address(this));
+        address at = aToken();
+        if (at == address(0) || at.code.length == 0) return 0;
+        return IERC20(at).balanceOf(address(this));
     }
 
     function supplyRateRay() external view returns (uint256) {
-        return uint256(aavePool.getReserveData(address(underlying)).currentLiquidityRate);
+        (bool ok, IAaveV3Pool.ReserveData memory r) = _getReserveData();
+        if (!ok) return 0;
+        return uint256(r.currentLiquidityRate);
     }
 
     function stressBps() public view returns (uint256) {
@@ -74,6 +88,9 @@ contract AaveV3YieldSource is IYieldSource {
 
     function deposit(uint256 assets) external onlyVault returns (uint256 deployedAssets) {
         if (assets == 0) return 0;
+        address at = aToken();
+        if (at == address(0) || at.code.length == 0) return 0;
+        if (address(aavePool).code.length == 0) return 0;
         underlying.safeTransferFrom(vault, address(this), assets);
         underlying.forceApprove(address(aavePool), assets);
         aavePool.supply(address(underlying), assets, address(this), 0);
@@ -82,10 +99,14 @@ contract AaveV3YieldSource is IYieldSource {
 
     function withdraw(uint256 assets, address to) external onlyVault returns (uint256 withdrawnAssets) {
         if (assets == 0) return 0;
+        address at = aToken();
+        if (at == address(0) || at.code.length == 0) return 0;
         return aavePool.withdraw(address(underlying), assets, to);
     }
 
     function withdrawAll(address to) external onlyVault returns (uint256 withdrawnAssets) {
+        address at = aToken();
+        if (at == address(0) || at.code.length == 0) return 0;
         uint256 assets = totalAssets();
         if (assets == 0) return 0;
         return aavePool.withdraw(address(underlying), assets, to);
