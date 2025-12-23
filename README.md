@@ -80,10 +80,10 @@ What can cause loss or underperformance:
 
 ### Sepolia (Chain ID: `11155111`)
 
-- `PredatorVault`: `0x69eC52139FB0D71b6BC30F8a64a888A476B7801E`
-- `PredatorReactiveManager`: `0x5591d1125E729fb241D8181A246De6776e5FD918`
-- `AaveV3YieldSource`: `0x139d8e8735ef44323bcEAE56a6eC8Cf7b1a6Ab5c`
-- `MorphoVaultYieldSource`: `0xFFAFC09a01a24cBb15801A5EbbCE3CC4b40dfB3b`
+- `PredatorVault`: `0x91Df8Fb96D0C6db050cd215A6e883B8233F41f2B`
+- `PredatorReactiveManager`: `0x9CC96a5AE38979fbC2831e2861F2cDACFBB54F8b`
+- `AaveV3YieldSource`: `0xc37925524b1505f1487EF21699ccBf272D3226C4`
+- `MorphoVaultYieldSource`: `0x4b6907795C906fCd9e8Bffc4e674dEd272febA3a`
 
 Protocol addresses used by this deployment:
 
@@ -94,7 +94,7 @@ Protocol addresses used by this deployment:
 
 ### Reactive Network (Lasna) (Chain ID: `5318007`)
 
-- `PredatorSentinel`: `0xe89d63C3eE26536244a9355f4712c2D1E321B96E`
+- `PredatorSentinel`: `0x520832cD1dc4A1A4F4dE2303B8761906e4Aa7991`
 - Reactive system subscription service: `0x0000000000000000000000000000000000fffFfF`
 
 ## Deploy / Run
@@ -145,3 +145,5 @@ RPC_URL=https://ethereum-sepolia.publicnode.com PRIVATE_KEY=... DO_STATUS=true m
 
 - `ASSET` must match `MORPHO_VAULT.asset()` or deployment will revert with `ASSET_MISMATCH`.
 - The sentinel registers subscriptions via an explicit `subscribe()` call (not in the constructor) to avoid subscription failures during deployment.
+ 
+ 

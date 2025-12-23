@@ -18,6 +18,14 @@ import {MockAaveV3Pool} from "../src/mocks/MockAaveV3Pool.sol";
 import {MockAaveProtocolDataProvider} from "../src/mocks/MockAaveProtocolDataProvider.sol";
 import {MockERC4626} from "../src/mocks/MockERC4626.sol";
 
+interface ICoverDebt {
+    function coverDebt() external;
+}
+
+interface IReactiveSubscribe {
+    function subscribe() external;
+}
+
 contract DeployPredator is Script {
     using SafeERC20 for IERC20;
 
@@ -65,7 +73,7 @@ contract DeployPredator is Script {
 
         bool doEvaluate = vm.envOr("DO_EVALUATE", false);
         if (doEvaluate) {
-            PredatorReactiveManager(r.manager).evaluateAndRebalance();
+            PredatorReactiveManager(r.manager).evaluateAndRebalance(address(0));
         }
 
         bool deploySentinel = vm.envOr("DEPLOY_SENTINEL", false);
@@ -89,7 +97,7 @@ contract DeployPredator is Script {
     }
 
     function runReactive(address destinationManager) external returns (DeployResult memory r) {
-        uint256 privateKey = vm.envOr("PRIVATE_KEY", uint256(0));
+        uint256 privateKey = vm.envOr("REACTIVE_PRIVATE_KEY", vm.envOr("PRIVATE_KEY", uint256(0)));
         if (privateKey != 0) {
             vm.startBroadcast(privateKey);
         } else {
@@ -113,6 +121,44 @@ contract DeployPredator is Script {
         console2.log("sentinel", r.sentinel);
 
         return r;
+    }
+
+    function runReactiveCoverDebt(address sentinel) external {
+        uint256 privateKey = vm.envOr("REACTIVE_PRIVATE_KEY", vm.envOr("PRIVATE_KEY", uint256(0)));
+        if (privateKey != 0) {
+            vm.startBroadcast(privateKey);
+        } else {
+            vm.startBroadcast();
+        }
+
+        uint256 topUpWei = vm.envOr("TOP_UP_WEI", uint256(0));
+        if (topUpWei > 0) {
+            (bool ok,) = payable(sentinel).call{value: topUpWei}("");
+            require(ok, "TOPUP_FAIL");
+        }
+
+        ICoverDebt(sentinel).coverDebt();
+
+        vm.stopBroadcast();
+    }
+
+    function runReactiveTopUpAndSubscribe(address sentinel) external {
+        uint256 privateKey = vm.envOr("REACTIVE_PRIVATE_KEY", vm.envOr("PRIVATE_KEY", uint256(0)));
+        if (privateKey != 0) {
+            vm.startBroadcast(privateKey);
+        } else {
+            vm.startBroadcast();
+        }
+
+        uint256 topUpWei = vm.envOr("TOP_UP_WEI", uint256(0));
+        if (topUpWei > 0) {
+            (bool ok,) = payable(sentinel).call{value: topUpWei}("");
+            require(ok, "TOPUP_FAIL");
+        }
+
+        IReactiveSubscribe(sentinel).subscribe();
+
+        vm.stopBroadcast();
     }
 
     function _deployWithEnv() internal returns (DeployResult memory r) {

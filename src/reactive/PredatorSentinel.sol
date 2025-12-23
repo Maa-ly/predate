@@ -138,7 +138,7 @@ contract PredatorSentinel is AbstractPausableReactive {
             return;
         }
 
-        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance(address)", address(0));
         emit Callback(destinationChainId, destinationManager, destinationGasLimit, payload);
     }
 }

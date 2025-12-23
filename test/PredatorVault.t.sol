@@ -80,7 +80,7 @@ contract PredatorVaultTest is Test {
         vm.warp(block.timestamp + 1 days);
 
         vm.warp(block.timestamp + 16 minutes);
-        (bool moved, uint8 target) = manager.evaluateAndRebalance();
+        (bool moved, uint8 target) = manager.evaluateAndRebalance(address(0));
         assertTrue(moved);
         assertEq(target, 1);
 
@@ -98,12 +98,12 @@ contract PredatorVaultTest is Test {
         vm.warp(block.timestamp + 1 days);
 
         vm.warp(block.timestamp + 16 minutes);
-        manager.evaluateAndRebalance();
+        manager.evaluateAndRebalance(address(0));
         assertEq(vault.activeSource(), 1);
 
         morphoVault.setMaxWithdrawBps(1000);
         vm.warp(block.timestamp + 16 minutes);
-        (bool moved, uint8 target) = manager.evaluateAndRebalance();
+        (bool moved, uint8 target) = manager.evaluateAndRebalance(address(0));
         assertTrue(moved);
         assertEq(target, 0);
         assertEq(vault.activeSource(), 0);
@@ -118,7 +118,7 @@ contract PredatorVaultTest is Test {
         asset.mint(address(morphoVault), 20e18);
         vm.warp(block.timestamp + 1 days);
         vm.warp(block.timestamp + 16 minutes);
-        manager.evaluateAndRebalance();
+        manager.evaluateAndRebalance(address(0));
         assertEq(vault.activeSource(), 1);
 
         vm.prank(alice);
@@ -160,7 +160,7 @@ contract PredatorSentinelTest is Test {
             log_index: 0
         });
 
-        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance(address)", address(0));
 
         vm.expectEmit(true, true, true, true, address(sentinel));
         emit Callback(chainId, destinationManager, destinationGasLimit, payload);
@@ -196,7 +196,7 @@ contract PredatorSentinelTest is Test {
             log_index: 0
         });
 
-        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance(address)", address(0));
 
         vm.expectEmit(true, true, true, true, address(sentinel));
         emit Callback(chainId, destinationManager, destinationGasLimit, payload);
@@ -266,7 +266,7 @@ contract PredatorSentinelTest is Test {
             log_index: 0
         });
 
-        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance()");
+        bytes memory payload = abi.encodeWithSignature("evaluateAndRebalance(address)", address(0));
 
         vm.expectEmit(true, true, true, true, address(sentinel));
         emit Callback(chainId, destinationManager, destinationGasLimit, payload);
