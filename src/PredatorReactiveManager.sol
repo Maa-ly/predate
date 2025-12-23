@@ -78,6 +78,10 @@ contract PredatorReactiveManager {
     }
 
     function evaluateAndRebalance() external returns (bool rebalanced, uint8 targetSource) {
+        return evaluateAndRebalance(address(0));
+    }
+
+    function evaluateAndRebalance(address) public returns (bool rebalanced, uint8 targetSource) {
         if (block.timestamp < lastRebalanceAt + cooldown) {
             targetSource = vault.activeSource();
             return (false, targetSource);

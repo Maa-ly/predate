@@ -85,7 +85,7 @@ contract InteractPredator is Script {
         }
 
         if (p.doEvaluate) {
-            (bool moved, uint8 target) = p.manager.evaluateAndRebalance();
+            (bool moved, uint8 target) = p.manager.evaluateAndRebalance(address(0));
             console2.log("rebalanced", moved);
             console2.log("targetSource", target);
         }

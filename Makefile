@@ -1,4 +1,4 @@
-.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe interact interact-sepolia
+.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe reactive-cover-debt reactive-topup-subscribe reactive-reactivate interact interact-sepolia
 
 ifneq (,$(wildcard .env))
 include .env
@@ -10,6 +10,7 @@ REACTIVE_RPC_URL ?= $(REACTIVE_RPC)
 PRIVATE_KEY ?=
 REACTIVE_PRIVATE_KEY ?=
 ANVIL_DEFAULT_PRIVATE_KEY ?= 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+TOP_UP_WEI ?= 0
 SENDER_ARGS := $(if $(strip $(PRIVATE_KEY)),--private-key $(PRIVATE_KEY),)
 REACTIVE_SENDER_ARGS := $(if $(strip $(REACTIVE_PRIVATE_KEY)),--private-key $(REACTIVE_PRIVATE_KEY),$(SENDER_ARGS))
 SEPOLIA_CHAIN_ID := 11155111
@@ -55,6 +56,20 @@ reactive-subscribe:
 	@SENTINEL=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress")]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/5318007/runReactive-latest.json); \
 	test -n "$$SENTINEL"; \
 	cast send $$SENTINEL "subscribe()" --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS)
+
+reactive-cover-debt:
+	@SENTINEL=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress") and (t.get("contractName") or "") == "PredatorSentinel"]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/5318007/runReactive-latest.json); \
+	test -n "$$SENTINEL"; \
+	if [ "$(TOP_UP_WEI)" != "0" ]; then cast send $$SENTINEL --value $(TOP_UP_WEI) --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS) >/dev/null; fi; \
+	cast send $$SENTINEL "coverDebt()" --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS)
+
+reactive-topup-subscribe:
+	@SENTINEL=$$(python3 -c 'import json,sys; p=sys.argv[1]; d=json.load(open(p)); txs=d.get("transactions",[]); a=[t.get("contractAddress") for t in txs if t.get("contractAddress") and (t.get("contractName") or "") == "PredatorSentinel"]; print(a[-1] if a else "")' broadcast/DeployPredator.s.sol/5318007/runReactive-latest.json); \
+	test -n "$$SENTINEL"; \
+	if [ "$(TOP_UP_WEI)" != "0" ]; then cast send $$SENTINEL --value $(TOP_UP_WEI) --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS) >/dev/null; fi; \
+	cast send $$SENTINEL "subscribe()" --rpc-url $(REACTIVE_RPC_URL) $(REACTIVE_SENDER_ARGS)
+
+reactive-reactivate: reactive-cover-debt reactive-topup-subscribe
 
 interact:
 	forge script script/InteractPredator.s.sol:InteractPredator --rpc-url $(RPC_URL) --broadcast $(SENDER_ARGS) -vvvv
