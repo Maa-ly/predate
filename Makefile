@@ -1,4 +1,4 @@
-.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe reactive-cover-debt reactive-topup-subscribe reactive-reactivate interact interact-sepolia
+.PHONY: fmt fmt-check build build-sizes test clean anvil deploy deploy-local deploy-sepolia deploy-reactive deploy-crosschain reactive-subscribe reactive-cover-debt reactive-topup-subscribe reactive-reactivate interact interact-sepolia status-sepolia deposit-sepolia deposit-eth-sepolia evaluate-sepolia redeem-sepolia
 
 ifneq (,$(wildcard .env))
 include .env
@@ -80,3 +80,18 @@ interact-sepolia:
 	test -n "$$VAULT"; \
 	test -n "$$MANAGER"; \
 	VAULT=$$VAULT MANAGER=$$MANAGER forge script script/InteractPredator.s.sol:InteractPredator --rpc-url $(RPC_URL) --broadcast $(SENDER_ARGS) -vvvv
+
+status-sepolia:
+	DO_STATUS=true DO_EVALUATE=false DEPOSIT_ASSETS=0 DEPOSIT_ETH=0 REDEEM_SHARES=0 $(MAKE) interact-sepolia
+
+deposit-sepolia:
+	DO_STATUS=true DO_EVALUATE=false DEPOSIT_ETH=0 REDEEM_SHARES=0 $(MAKE) interact-sepolia
+
+deposit-eth-sepolia:
+	DO_STATUS=true DO_EVALUATE=false DEPOSIT_ASSETS=0 REDEEM_SHARES=0 $(MAKE) interact-sepolia
+
+evaluate-sepolia:
+	DO_STATUS=true DO_EVALUATE=true DEPOSIT_ASSETS=0 DEPOSIT_ETH=0 REDEEM_SHARES=0 $(MAKE) interact-sepolia
+
+redeem-sepolia:
+	DO_STATUS=true DO_EVALUATE=false DEPOSIT_ASSETS=0 DEPOSIT_ETH=0 $(MAKE) interact-sepolia

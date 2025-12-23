@@ -146,4 +146,13 @@ RPC_URL=https://ethereum-sepolia.publicnode.com PRIVATE_KEY=... DO_STATUS=true m
 - `ASSET` must match `MORPHO_VAULT.asset()` or deployment will revert with `ASSET_MISMATCH`.
 - The sentinel registers subscriptions via an explicit `subscribe()` call (not in the constructor) to avoid subscription failures during deployment.
  
- 
+ Run this to top up the Lasna sentinel with a bigger buffer, clear any debt, and (re)subscribe:
+
+- make reactive-reactivate TOP_UP_WEI=100000000000000000
+That TOP_UP_WEI is in wei; 100000000000000000 = 0.1 REACT/ETH on Lasna. If you want even more, bump it (e.g. 0.5 = 500000000000000000 ).
+
+To sanity-check you’re “safe” after topping up:
+
+- cast balance 0x520832cD1dc4A1A4F4dE2303B8761906e4Aa7991 --rpc-url https://lasna-rpc.rnk.dev/
+- cast call 0x0000000000000000000000000000000000fffFfF "debt(address)(uint256)" 0x520832cD1dc4A1A4F4dE2303B8761906e4Aa7991 --rpc-url https://lasna-rpc.rnk.dev/
+Goal: sentinel balance comfortably > 0 and debt(...) = 0 .
