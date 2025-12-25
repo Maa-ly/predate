@@ -62,18 +62,18 @@ What can cause loss or underperformance:
 
 ### Contracts
 
-- `src/PredatorVault.sol`
+- `contracts/src/PredatorVault.sol`
   - Holds underlying and mints/burns shares
   - Owns the source adapters and delegates moves via the manager
-- `src/adapters/AaveV3YieldSource.sol`
+- `contracts/src/adapters/AaveV3YieldSource.sol`
   - Supplies/withdraws to Aave v3 Pool
   - Reads yield/stress via Aave pool + data provider
-- `src/adapters/MorphoVaultYieldSource.sol`
+- `contracts/src/adapters/MorphoVaultYieldSource.sol`
   - Deposits/withdraws to an ERC4626 vault
   - Reads yield/stress from the vault (e.g. maxWithdraw / share price dynamics)
-- `src/PredatorReactiveManager.sol`
+- `contracts/src/PredatorReactiveManager.sol`
   - Evaluates the two sources and calls `PredatorVault.rebalanceTo(target)`
-- `src/reactive/PredatorSentinel.sol`
+- `contracts/src/reactive/PredatorSentinel.sol`
   - Reactive Contract that subscribes to Sepolia logs and emits callbacks to the Sepolia manager
 
 ## Deployments
@@ -101,9 +101,9 @@ Protocol addresses used by this deployment:
 
 This repo uses Foundry scripts and a `Makefile`.
 
-- Set `RPC_URL` and `PRIVATE_KEY` (or put them in `.env`).
+- Set `RPC_URL` and `PRIVATE_KEY` (or put them in `contracts/.env`).
 - Deploy on Sepolia: `make deploy-sepolia`
-- Interact with latest Sepolia deployment: `make interact-sepolia` (reads `broadcast/DeployPredator.s.sol/11155111/runSepolia-latest.json`)
+- Interact with latest Sepolia deployment: `make interact-sepolia` (reads `contracts/broadcast/DeployPredator.s.sol/11155111/runSepolia-latest.json`)
 - Deploy sentinel on Lasna: `make deploy-reactive`
 - Register subscriptions on Lasna: `make reactive-subscribe`
 - Full flow (Sepolia + Lasna): `make deploy-crosschain`
@@ -115,7 +115,7 @@ This repo uses Foundry scripts and a `Makefile`.
 - `make deploy-sepolia`: Deploy vault + adapters + manager to Sepolia using `.env` addresses
 - `make deploy-reactive`: Deploy `PredatorSentinel` to Lasna targeting the latest Sepolia manager
 - `make reactive-subscribe`: Register Reactive Network subscriptions for the latest sentinel
-- `make interact-sepolia`: Run `script/InteractPredator.s.sol` against the latest Sepolia deployment
+- `make interact-sepolia`: Run `contracts/script/InteractPredator.s.sol` against the latest Sepolia deployment
 
 ### Interact Script
 
@@ -158,7 +158,7 @@ To sanity-check you’re “safe” after topping up:
 Goal: sentinel balance comfortably > 0 and debt(...) = 0 .
 
 
-he evaluateAndRebalance function (I assume that's what you meant by "exvute nand evalauet" - likely a typo for "evaluate and rebalance") assesses the supply rates and stress levels of two yield sources (e.g., Aave and Morpho vaults) and decides whether to rebalance the vault to the more favorable one based on configurable thresholds. It checks for rate differences exceeding a threshold or stress levels hitting exit/max limits, then calls the vault's rebalanceTo if needed, with a cooldown to prevent excessive actions.
+The evaluateAndRebalance function (I assume that's what you meant by "exvute nand evalauet" - likely a typo for "evaluate and rebalance") assesses the supply rates and stress levels of two yield sources (e.g., Aave and Morpho vaults) and decides whether to rebalance the vault to the more favorable one based on configurable thresholds. It checks for rate differences exceeding a threshold or stress levels hitting exit/max limits, then calls the vault's rebalanceTo if needed, with a cooldown to prevent excessive actions.
 
 The Reactive Network enables cross-chain reactivity: the PredatorSentinel contract subscribes to specific events (like rate updates or vault interactions) on a source chain and reacts by emitting a callback to trigger evaluateAndRebalance on a destination chain, allowing automated yield optimization across chains.
 

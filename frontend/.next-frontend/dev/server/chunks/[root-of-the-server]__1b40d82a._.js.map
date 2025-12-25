@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///Users/odeili/Projects/Hackathons/bounty/frontend/src/app/api/reactive-rpc/route.ts"],"sourcesContent":["export async function POST(request: Request) {\n  const body = await request.text();\n\n  const upstream = await fetch(\"https://lasna-rpc.rnk.dev/\", {\n    method: \"POST\",\n    headers: {\n      \"content-type\": request.headers.get(\"content-type\") ?? \"application/json\",\n    },\n    body,\n  });\n\n  return new Response(await upstream.text(), {\n    status: upstream.status,\n    headers: {\n      \"content-type\": upstream.headers.get(\"content-type\") ?? \"application/json\",\n    },\n  });\n}\n"],"names":[],"mappings":";;;;AAAO,eAAe,KAAK,OAAgB;IACzC,MAAM,OAAO,MAAM,QAAQ,IAAI;IAE/B,MAAM,WAAW,MAAM,MAAM,8BAA8B;QACzD,QAAQ;QACR,SAAS;YACP,gBAAgB,QAAQ,OAAO,CAAC,GAAG,CAAC,mBAAmB;QACzD;QACA;IACF;IAEA,OAAO,IAAI,SAAS,MAAM,SAAS,IAAI,IAAI;QACzC,QAAQ,SAAS,MAAM;QACvB,SAAS;YACP,gBAAgB,SAAS,OAAO,CAAC,GAAG,CAAC,mBAAmB;QAC1D;IACF;AACF"}}]
-}
