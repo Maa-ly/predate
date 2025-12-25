@@ -1,0 +1,3408 @@
+[00:00:01.578] Server  LOG     
+[00:00:01.578] Server  LOG       We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.578] Server  LOG       The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.578] Server  LOG       	- include was updated to add '.next-frontend/types/**/*.ts'
+[00:00:01.578] Server  LOG       	- include was updated to add '.next-frontend/dev/types/**/*.ts'
+[00:00:01.578] Server  LOG     
+[00:00:01.746] Server  LOG     ✓ Ready in 1225ms
+[00:00:15.056] Server  LOG     ○ Compiling / ...
+[00:00:21.937] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:22.684] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:00:22.684] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:00:23.704] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:00:31.274] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:31.279] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:00:31.420] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:00:32.409] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:00:37.761] Server  LOG     ✓ Finished filesystem cache database compaction in 10.2s
+[00:02:01.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:01.163] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:02:01.163] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:02:01.722] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:02:20.159] Server  LOG     ○ Compiling /contract ...
+[00:09:30.647] Server  LOG     ✓ Compiled in 9.3s
+[00:09:31.643] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:09:32.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:32.416] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:09:32.416] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:09:32.758] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:09:34.051] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:34.502] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:09:34.503] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:09:36.445] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:09:41.552] Server  LOG     ✓ Compiled in 4.3s
+[00:10:06.810] Server  LOG     ✓ Finished writing to filesystem cache in 35.7s
+[00:10:17.504] Server  LOG     ✓ Compiled in 9.2s
+[00:10:41.354] Server  LOG     ✓ Compiled in 4.1s
+[00:11:19.216] Server  LOG     ✓ Finished writing to filesystem cache in 59s
+[00:11:37.359] Server  LOG     ✓ Finished filesystem cache database compaction in 18.6s
+[00:11:38.355] Server  LOG     ✓ Finished writing to filesystem cache in 17.5s
+[00:15:13.436] Browser LOG     [ChromeTransport] chromePort disconnected
+[00:15:35.349] Server  LOG     ✓ Finished writing to filesystem cache in 91s
+[00:21:03.029] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:05.025] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:21:05.130] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:21:05.983] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:24:51.788] Server  LOG     ✓ Compiled in 61ms
+[00:24:52.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:52.418] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:24:52.418] Browser ERROR   unhandledRejection: TypeError: Cannot read properties of undefined (reading 'rehydrate')
+[00:24:53.190] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:26:05.470] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:26:05.471] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:26:21.341] Server  LOG     ✓ Finished writing to filesystem cache in 13.5s
+[00:26:35.819] Server  ERROR   ReferenceError: indexedDB is not defined
+[00:26:35.827] Server  ERROR   ⨯ "unhandledRejection:" ReferenceError: indexedDB is not defined
+[00:26:35.833] Server  ERROR   ⨯ "unhandledRejection: " ReferenceError: indexedDB is not defined
+[00:26:36.111] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:36.432] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:26:36.934] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:30:54.080] Server  LOG     ✓ Compiled in 7.3s
+[00:30:55.119] Server  LOG     ✓ Compiled in 8ms
+[00:31:11.333] Server  LOG     ✓ Finished filesystem cache database compaction in 13.9s
+[00:31:22.726] Server  LOG     ✓ Compiled in 4.3s
+[00:31:34.440] Server  WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 3 times.
+[00:31:38.084] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:38.772] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
+                              <button>
+                              <button>
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                              ...
+                    ...
+
+[00:31:40.036] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:31:46.317] Server  LOG     ✓ Finished writing to filesystem cache in 21.6s
+[00:34:32.483] Server  LOG     ✓ Compiled in 2.2s
+[00:34:41.869] Server  LOG     ✓ Compiled in 715ms
+[00:35:50.314] Server  LOG     ✓ Compiled in 16ms
+[00:38:21.803] Server  LOG     ✓ Compiled in 7.1s
+[00:38:21.964] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:38:22.689] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 2 times.
+[00:39:20.734] Server  LOG     ✓ Compiled in 12s
+[00:39:21.085] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 3 times.
+[00:39:21.303] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 3 times.
+[00:39:57.969] Server  LOG     ✓ Finished writing to filesystem cache in 34.2s
+[00:40:22.883] Server  LOG     ✓ Finished filesystem cache database compaction in 25.3s
+[00:41:43.047] Server  LOG     ✓ Compiled in 3.2s
+[00:41:44.143] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 4 times.
+[00:41:44.150] Browser WARN    WalletConnect Core is already initialized. This is probably a mistake and can lead to unexpected behavior. Init() was called 4 times.
+[00:42:05.821] Server  LOG     ✓ Compiled in 268ms
+[00:42:46.580] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:46.808] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
+                              <button>
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                    ...
+
+[00:42:47.664] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:43:07.266] Server  LOG     ✓ Finished writing to filesystem cache in 15.9s
+[00:44:06.906] Server  LOG     ✓ Compiled in 2.6s
+[00:44:26.687] Server  LOG     ✓ Finished writing to filesystem cache in 18.0s
+[00:44:59.577] Server  LOG     ✓ Finished filesystem cache database compaction in 32.9s
+[00:45:18.459] Server  LOG     ✓ Compiled in 1074ms
+[00:45:25.741] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:26.702] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <link>
+    <script>
+    <script>
+    <script>
+    <script>
+    <RootLayout>
+      <html lang="en">
+        <body className="geist_a715...">
+          <Providers>
+            <WagmiProvider config={{chains:[...], ...}}>
+              <Hydrate config={{chains:[...], ...}}>
+                <QueryClientProvider client={{}}>
+                  <div className="min-h-scre...">
+                    <NavBar>
+                      <header className="w-full bor...">
+                        <div className="mx-auto fl...">
+                          <div>
+                          <WalletStatus>
+                            <div className="flex items...">
+                              <button>
++                             <button
++                               type="button"
++                               onClick={function onClick}
++                               disabled={false}
++                               className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc..."
++                             >
+                    ...
+
+[00:45:29.272] Server  LOG     ○ Compiling /api/reactive-rpc ...
+[00:45:31.694] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:45:43.484] Server  LOG     ✓ Finished writing to filesystem cache in 10.8s
+[00:46:06.786] Server  LOG     ✓ Compiled in 2.1s
+[00:46:46.655] Server  LOG     ✓ Compiled in 413ms
+[00:46:58.853] Server  LOG     ✓ Compiled in 1493ms
+[00:46:59.354] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:46:59.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:01.462] Server  LOG     ✓ Compiled in 2.6s
+[00:47:01.570] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:01.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:01.848] Server  LOG     ○ Compiling /_error ...
+[00:47:02.103] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:02.907] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:02.928] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:03.096] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:03.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:03.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:03.838] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:04.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:04.858] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:05.704] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:06.014] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:06.014] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:06.693] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:06.693] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:08.132] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:08.686] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:08.845] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:09.683] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:10.263] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:10.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:10.977] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:11.688] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:13.946] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:14.692] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:14.875] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:15.691] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:15.869] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:16.765] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:17.051] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:17.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:27.619] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:27.619] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:27.619] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:27.619] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:27.709] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.031] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.031] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.031] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.031] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.031] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:29.605] Server  LOG     ✓ Finished writing to filesystem cache in 21.7s
+[00:47:29.916] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:30.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:30.968] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:30.968] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:30.968] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:31.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:31.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:31.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:31.856] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:32.684] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:42.855] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:43.687] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:43.835] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:44.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:44.852] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:45.687] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:45.838] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:46.685] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.185] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.185] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.185] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.187] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.188] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.188] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.413] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.414] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.514] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:48.514] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:49.141] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:49.143] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:50.835] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:50.839] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:51.882] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:51.884] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.053] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.057] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.381] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.386] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.883] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:52.894] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.060] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.060] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.063] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.063] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.376] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:53.377] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:54.052] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:54.052] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:54.053] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:54.053] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.055] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.055] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.246] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.248] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.581] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:55.582] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:56.216] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:56.216] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.094] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.107] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.293] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.293] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.643] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:58.645] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:59.393] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:47:59.394] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.250] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.250] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.410] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.414] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.737] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:00.740] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:01.677] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:01.677] Browser ERROR   ./src/app/components/NavBar.tsx:4:22
+Ecmascript file had an error
+   2 | import dynamic from "next/dynamic";
+   3 |
+>  4 | const WalletStatus = dynamic(
+     |                      ^^^^^^^^
+>  5 |   () => import("@/app/components/WalletStatus").then((m) => m.WalletStatus),
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   { ssr: false },
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | );
+     | ^^
+   8 |
+   9 | export function NavBar() {
+  10 |   return (
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+Import trace:
+  Server Component:
+    ./src/app/components/NavBar.tsx
+    ./src/app/layout.tsx
+[00:48:03.311] Server  LOG     ✓ Compiled in 1973ms
+[00:48:15.188] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:17.231] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:48:24.013] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:24.023] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="contract/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/contract" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="contract/p...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function ContractPage} serverProvidedParams={{...}}>
+                        <ContractPage params={Promise} searchParams={Promise}>
+                          <div className="space-y-8">
+                            <div>
+                            <section>
+                            <section>
+                            <section className="space-y-3 ...">
+                              <div>
+                              <button
+                                type="button"
++                               disabled={false}
+-                               disabled=""
+                                onClick={function onClick}
+                                className="rounded-md border border-zinc-200 px-3 py-2 text-sm font-medium hover:bg-zi..."
+                              >
++                               {"Evaluate & Rebalance"}
+                            <section className="space-y-3 ...">
+                              <div>
+                              <div>
+                              <div className="grid grid-...">
+                                <div>
+                                <div>
+                                <div>
+                                <div className="rounded-lg...">
+                                  <div>
+                                  <div className="font-medium">
++                                   —
+-                                   Connect wallet
+                                ...
+                              ...
+                    ...
+                  ...
+        ...
+
+[00:48:26.838] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:48:28.377] Server  LOG     ✓ Finished writing to filesystem cache in 22.3s
+[00:49:29.928] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:30.834] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[00:49:35.988] Server  LOG     ✓ Finished filesystem cache database compaction in 68s
+[00:49:42.684] Server  LOG     ✓ Finished writing to filesystem cache in 72s
+[01:23:00.579] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:00.888] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:01.312] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:02.032] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:02.191] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:03.547] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:03.628] Server  ERROR   ⨯ TypeError: fetch failed
+[01:23:05.080] Server  ERROR   ⨯ TypeError: fetch failed
+[02:46:28.926] Server  ERROR   ⨯ TypeError: fetch failed
+[03:01:51.825] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:01:51.989] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="contract/" loading={null}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/contract" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                <SegmentViewNode type="page" pagePath="contract/p...">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function ContractPage} serverProvidedParams={{...}}>
+                    <ContractPage params={Promise} searchParams={Promise}>
+                      <div className="space-y-8">
+                        <div>
+                        <section>
+                        <section>
+                        <section>
+                        <section className="space-y-3 ...">
+                          <div>
+                          <div>
+                          <div className="grid grid-...">
+                            <div>
+                            <div>
+                            <div>
+                            <div className="rounded-lg...">
+                              <div>
+                              <div className="font-medium">
++                               —
+-                               Connect wallet
+                            ...
+                          ...
+                ...
+              ...
+
+[03:01:52.412] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[03:07:08.190] Server  LOG     ✓ Compiled in 5s
+[03:07:20.606] Server  LOG     ✓ Compiled in 1948ms
+[03:07:44.013] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:07:44.635] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[03:11:18.687] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:11:18.959] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="contract/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/contract" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="contract/p...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function ContractPage} serverProvidedParams={{...}}>
+                        <ContractPage params={Promise} searchParams={Promise}>
+                          <div className="space-y-8">
+                            <div>
+                            <section>
+                            <section>
+                            <section className="space-y-3 ...">
+                              <div>
+                              <button
+                                type="button"
++                               disabled={false}
+-                               disabled=""
+                                onClick={function onClick}
+                                className="rounded-md border border-zinc-200 px-3 py-2 text-sm font-medium hover:bg-zi..."
+                              >
++                               {"Evaluate & Rebalance"}
+                            <section className="space-y-3 ...">
+                              <div>
+                              <div>
+                              <div className="grid grid-...">
+                                <div>
+                                <div>
+                                <div>
+                                <div className="rounded-lg...">
+                                  <div>
+                                  <div className="font-medium">
++                                   —
+-                                   Connect wallet
+                                ...
+                              ...
+                    ...
+                  ...
+        ...
+
+[03:11:19.682] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[03:14:39.875] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:14:40.040] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="contract/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/contract" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="contract/p...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function ContractPage} serverProvidedParams={{...}}>
+                        <ContractPage params={Promise} searchParams={Promise}>
+                          <div className="space-y-8">
+                            <div>
+                            <section>
+                            <section>
+                            <section className="space-y-3 ...">
+                              <div>
+                              <button
+                                type="button"
++                               disabled={false}
+-                               disabled=""
+                                onClick={function onClick}
+                                className="rounded-md border border-zinc-200 px-3 py-2 text-sm font-medium hover:bg-zi..."
+                              >
++                               {"Evaluate & Rebalance"}
+                            <section className="space-y-3 ...">
+                              <div>
+                              <div>
+                              <div className="grid grid-...">
+                                <div>
+                                <div>
+                                <div>
+                                <div className="rounded-lg...">
+                                  <div>
+                                  <div className="font-medium">
++                                   —
+-                                   Connect wallet
+                                ...
+                              ...
+                    ...
+                  ...
+        ...
+
+[03:14:40.525] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[03:16:12.277] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:16:12.467] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="contract/" loading={null}>
+            <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/contract" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="contract/p...">
+                      <SegmentTrieNode>
+                      <ClientPageRoot Component={function ContractPage} serverProvidedParams={{...}}>
+                        <ContractPage params={Promise} searchParams={Promise}>
+                          <div className="space-y-8">
+                            <div>
+                            <section>
+                            <section>
+                            <section className="space-y-3 ...">
+                              <div>
+                              <button
+                                type="button"
++                               disabled={false}
+-                               disabled=""
+                                onClick={function onClick}
+                                className="rounded-md border border-zinc-200 px-3 py-2 text-sm font-medium hover:bg-zi..."
+                              >
++                               {"Evaluate & Rebalance"}
+                            <section className="space-y-3 ...">
+                              <div>
+                              <div>
+                              <div className="grid grid-...">
+                                <div>
+                                <div>
+                                <div>
+                                <div className="rounded-lg...">
+                                  <div>
+                                  <div className="font-medium">
++                                   —
+-                                   Connect wallet
+                                ...
+                              ...
+                    ...
+                  ...
+        ...
+
+[03:16:12.789] Browser WARN    Lit is in dev mode. Not recommended for production! See https://lit.dev/msg/dev-mode for more information.
+[03:20:20.139] Server  LOG     ✓ Compiled in 1834ms
+[03:23:32.975] Server  LOG     ✓ Compiled in 4.5s
+[03:23:51.744] Server  LOG     ✓ Finished writing to filesystem cache in 16.7s

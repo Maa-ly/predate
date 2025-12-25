@@ -156,3 +156,10 @@ To sanity-check you’re “safe” after topping up:
 - cast balance 0x520832cD1dc4A1A4F4dE2303B8761906e4Aa7991 --rpc-url https://lasna-rpc.rnk.dev/
 - cast call 0x0000000000000000000000000000000000fffFfF "debt(address)(uint256)" 0x520832cD1dc4A1A4F4dE2303B8761906e4Aa7991 --rpc-url https://lasna-rpc.rnk.dev/
 Goal: sentinel balance comfortably > 0 and debt(...) = 0 .
+
+
+he evaluateAndRebalance function (I assume that's what you meant by "exvute nand evalauet" - likely a typo for "evaluate and rebalance") assesses the supply rates and stress levels of two yield sources (e.g., Aave and Morpho vaults) and decides whether to rebalance the vault to the more favorable one based on configurable thresholds. It checks for rate differences exceeding a threshold or stress levels hitting exit/max limits, then calls the vault's rebalanceTo if needed, with a cooldown to prevent excessive actions.
+
+The Reactive Network enables cross-chain reactivity: the PredatorSentinel contract subscribes to specific events (like rate updates or vault interactions) on a source chain and reacts by emitting a callback to trigger evaluateAndRebalance on a destination chain, allowing automated yield optimization across chains.
+
+For safety, it uses pausing mechanisms, owner-only controls, cooldowns to limit rebalances, and validates reactive callers/senders to prevent unauthorized triggers.
