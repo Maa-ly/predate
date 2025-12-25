@@ -1,0 +1,8 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/reactive-rpc/route": "/api/reactive-rpc",
+  "/contract/page": "/contract",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/"
+}
