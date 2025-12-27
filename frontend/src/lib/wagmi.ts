@@ -19,13 +19,17 @@ const walletConnectProjectId =
   process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ??
   "a0d5718b83a240abf60c66a19d2359df";
 
-const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+const envAppUrl = process.env.NEXT_PUBLIC_APP_URL;
+const resolvedAppUrl =
+  typeof window !== "undefined"
+    ? window.location.origin
+    : envAppUrl ?? "http://localhost:3000";
 
 const sepoliaRpcUrl =
   process.env.NEXT_PUBLIC_SEPOLIA_RPC_URL ??
   "https://ethereum-sepolia.publicnode.com";
 const reactiveRpcUrl =
-  process.env.NEXT_PUBLIC_REACTIVE_RPC_URL ?? `${appUrl}/api/reactive-rpc`;
+  process.env.NEXT_PUBLIC_REACTIVE_RPC_URL ?? `${resolvedAppUrl}/api/reactive-rpc`;
 
 const connectors = (() => {
   const base = [injected()];
@@ -38,8 +42,8 @@ const connectors = (() => {
       metadata: {
         name: "Predator",
         description: "Predator Vault Frontend",
-        url: appUrl,
-        icons: [`${appUrl}/favicon.ico`],
+        url: resolvedAppUrl,
+        icons: [`${resolvedAppUrl}/favicon.ico`],
       },
     }),
   ];
